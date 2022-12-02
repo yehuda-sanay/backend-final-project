@@ -8,16 +8,17 @@ const path = require('path');
 const usersRouter = require('../server/routes/users-router')
 const passport = require('passport');
 require('./config/passport')(passport);
+const eilatRouter =require('./routes/eilat-router')
 const app = express();
-const port = 8080;
+const port = 7070;
 
 app.use(passport.initialize())
 app.use(express.json({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 app.use(cors())
 
-
-app.use('/api/users', usersRouter);
+app.use('/eilat',eilatRouter)
+app.use('/users', usersRouter);
 
 app.get('/', (req, res) => {
     res.send({ massage: "success" })

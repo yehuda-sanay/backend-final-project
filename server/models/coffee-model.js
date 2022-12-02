@@ -1,17 +1,5 @@
 const mongoose = require('mongoose')
 
-const CoffeeSchema = new mongoose.Schema(
-  {
-    cities:{
-        TelAviv:{},
-        Acre:{},
-        Herzliya:{},
-        BeerShava:{},
-        Eilat:{}
-    }
-  }  
-);
-
 const OrdersSchema= new mongoose.Schema({
     NumberOfOrder:{type:Number, required:true},
     PurhaseError:{type:Number, required:true},
@@ -21,11 +9,23 @@ const OrdersSchema= new mongoose.Schema({
 })
 
 const ProductSchema= new mongoose.Schema({
-    Coffee:{},
-    Drink:{},
-    Cake:{},
-    Tea:{},
-    Zinger:{}
+    Coffee:{type:OrdersSchema}, 
+    Drink:{type:OrdersSchema},
+    Cake:{type:OrdersSchema},
+    Tea:{type:OrdersSchema},
+    Zinger:{type:OrdersSchema}
 })
+const CoffeeSchema = new mongoose.Schema(
+  {
+    cities:{
+        TelAviv:{type:ProductSchema},
+        Acre:{type:ProductSchema},
+        Herzliya:{type:ProductSchema},
+        BeerShava:{type:ProductSchema},
+        Eilat:{type:ProductSchema}
+    }
+  }  
+);
+
 
 module.exports = mongoose.model("Coffee", CoffeeSchema);
