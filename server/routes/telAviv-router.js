@@ -1,9 +1,9 @@
 const TelAvivRouter = require('express').Router()
-const {addOrderFromTelAviv,getAllDetelsFromTelAviv,getPcoffeeOrderBy,getAllOrderFromTelAviv,getAllCoffeeOrderPurcaseErrorTelAviv,getAllCoffeeOrderClientDeclinedTelAviv
-,getAllCoffeeOrderProfitTelAviv,getOrderByDay1TelAviv,getOrderByDay2TelAviv,getOrderByDay3TelAviv,getOrderByDay4TelAviv,getOrderByDay5TelAviv,getOrderByDay6TelAviv,getOrderByDay7TelAviv} = require('../controllers/TelAviv-ctrl');
+const {addOrderFromTelAviv,getAllDetelsFromTelAviv,getAllOrderFromTelAviv,getAllCoffeeOrderPurcaseErrorTelAviv,getAllCoffeeOrderClientDeclinedTelAviv
+,getAllCoffeeOrderProfitTelAviv,getOrderByDay1TelAviv,getOrderByDay2TelAviv,getOrderByDay3TelAviv,getOrderByDay4TelAviv,getOrderByDay5TelAviv,getOrderByDay6TelAviv,getOrderByDay7TelAviv} = require('../controllers/telAviv-ctrl');
 
 TelAvivRouter.get('/', getAllDetelsFromTelAviv);
-TelAvivRouter.get('/getPcoffeeOrderBy',getPcoffeeOrderBy)
+
 TelAvivRouter.get('/getAllOrderFromTelAviv', getAllOrderFromTelAviv);
 TelAvivRouter.get('/getAllCoffeeOrderPurcaseErrorTelAviv',getAllCoffeeOrderPurcaseErrorTelAviv)
 TelAvivRouter.get('/getAllCoffeeOrderClientDeclinedTelAviv',getAllCoffeeOrderClientDeclinedTelAviv)

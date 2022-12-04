@@ -72,15 +72,15 @@ const getAllOrderFromBeerTelAviv = async(req, res) => {
     })
   .catch (error=> res.status(400).json({ successes: false , error})) 
 };
-const getPcoffeeOrderBy = async(req,res) => {
-    await CoffesModel.find({'Coffee.Date':'07/12'})
-    .then((result) => {
-        return result.length == 0
-          ? res.status(300).json({ successes: true, msg: "no coffe in BeerTelAviv was found" })
-          : res.status(200).json({ successes: true , result});
-      })
-    .catch (error=> res.status(400).json({ successes: false , error})) 
-  };
+// const getPcoffeeOrderBy = async(req,res) => {
+//     await CoffesModel.find({'Coffee.Date':'07/12'})
+//     .then((result) => {
+//         return result.length == 0
+//           ? res.status(300).json({ successes: true, msg: "no coffe in BeerTelAviv was found" })
+//           : res.status(200).json({ successes: true , result});
+//       })
+//     .catch (error=> res.status(400).json({ successes: false , error})) 
+//   };
 
 const addOrderFromBeerTelAviv = async(req,res) => {
     await CoffesModel.insertMany(req.body.product)
@@ -115,5 +115,5 @@ const getAllCoffeeOrderProfitBeerTelAviv = async(req, res) => {
 
     
 
-module.exports= {addOrderFromBeerTelAviv,getAllDetelsFromBeerTelAviv,getPcoffeeOrderBy,getAllOrderFromBeerTelAviv,getAllCoffeeOrderPurcaseErrorBeerTelAviv,getAllCoffeeOrderClientDeclinedBeerTelAviv
+module.exports= {addOrderFromBeerTelAviv,getAllDetelsFromBeerTelAviv,getAllOrderFromBeerTelAviv,getAllCoffeeOrderPurcaseErrorBeerTelAviv,getAllCoffeeOrderClientDeclinedBeerTelAviv
 ,getAllCoffeeOrderProfitBeerTelAviv,getOrderByDay1BeerTelAviv,getOrderByDay2BeerTelAviv,getOrderByDay3BeerTelAviv,getOrderByDay4BeerTelAviv,getOrderByDay5BeerTelAviv,getOrderByDay6BeerTelAviv,getOrderByDay7BeerTelAviv}
