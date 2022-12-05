@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
 const OrdersSchema= new mongoose.Schema({
+
     NumberOfOrder:{type:Number, required:true},
     PurhaseError:{type:Number, required:true},
     ClientDeclined:{type:Number, required:true},
@@ -8,7 +9,6 @@ const OrdersSchema= new mongoose.Schema({
     Date:{type:String, required:true},
     Hour:{type:String, required:true},
     City:{type:String, required:true},
-    
 
 })
 
@@ -19,7 +19,7 @@ const ProductSchema= new mongoose.Schema({
     Tea:{type:OrdersSchema},
     Zinger:{type:OrdersSchema},
 })
-module.exports = mongoose.model("NewCoffee", ProductSchema);
+module.exports = mongoose.model("newCoffee", ProductSchema);
 // const CoffeeSchema = new mongoose.Schema(
 //   {
 //     cities:{

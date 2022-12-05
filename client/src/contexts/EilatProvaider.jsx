@@ -44,7 +44,7 @@ export default function EilatProvaider({ children }) {
 //     // getOrderByDay6EilatApi().then(res=>setOrderByDay6Eilat(res.result))
 //     // getOrderByDay7EilatApi().then(res=>setOrderByDay7Eilat(res.result))
   }, []);
-//   console.log(AllDetelsFromEilat);
+  // console.log("yehuda win:",AllDetelsFromEilat);
 
   return (
     <EilatContext.Provider

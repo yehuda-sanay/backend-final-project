@@ -1,4 +1,4 @@
-const API_STRING="http://localhost:7070/eilat/"
+const API_STRING="http://localhost:7070/eilat"
 export function getAllDetelsFromEilatApi(){
     try {
         return  fetch(API_STRING).then(res=>res.json())
@@ -9,7 +9,7 @@ export function getAllDetelsFromEilatApi(){
 }
 export function getAllOrderFromEilatApi(){
     try {
-        return  fetch(`${API_STRING}getAllOrderFromEilat`).then(res=>res.json())
+        return  fetch(`${API_STRING}/getAllOrderFromEilat`).then(res=>res.json())
         
     } catch (error) {
         console.log(error)
@@ -17,7 +17,7 @@ export function getAllOrderFromEilatApi(){
 }
 export function getAllCoffeeOrderPurcaseErrorEilatApi(){
     try {
-        return  fetch(`${API_STRING}getAllCoffeeOrderPurcaseErrorEilat`).then(res=>res.json())
+        return  fetch(`${API_STRING}/getAllCoffeeOrderPurcaseErrorEilat`).then(res=>res.json())
         
     } catch (error) {
         console.log(error)
@@ -25,7 +25,7 @@ export function getAllCoffeeOrderPurcaseErrorEilatApi(){
 }
 export function getAllCoffeeOrderClientDeclinedEilatApi(){
     try {
-        return  fetch(`${API_STRING}getAllCoffeeOrderClientDeclinedEilat`).then(res=>res.json())
+        return  fetch(`${API_STRING}/getAllCoffeeOrderClientDeclinedEilat`).then(res=>res.json())
         
     } catch (error) {
         console.log(error)
@@ -33,7 +33,7 @@ export function getAllCoffeeOrderClientDeclinedEilatApi(){
 }
 export function getAllCoffeeOrderProfitEilatApi(){
     try {
-        return  fetch(`${API_STRING}getAllCoffeeOrderProfitEilat`).then(res=>res.json())
+        return  fetch(`${API_STRING}/getAllCoffeeOrderProfitEilat`).then(res=>res.json())
         
     } catch (error) {
         console.log(error)
@@ -42,7 +42,7 @@ export function getAllCoffeeOrderProfitEilatApi(){
 
 export function addOrderFromEilatApi(){
     try {
-        return  fetch(`${API_STRING}addOrderFromEilat`).then(res=>res.json())
+        return  fetch(`${API_STRING}/addOrderFromEilat`).then(res=>res.json())
         
     } catch (error) {
         console.log(error)
