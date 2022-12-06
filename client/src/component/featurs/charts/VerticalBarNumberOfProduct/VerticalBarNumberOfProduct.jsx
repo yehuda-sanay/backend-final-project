@@ -1,4 +1,3 @@
-import "./VerticalBar.css";
 import React from "react";
 
 import {
@@ -35,7 +34,7 @@ export const options = {
   },
 };
 
-export function VerticalBar({ orderWeekly }) {
+export function VerticalBarNumberOfProduct({ orderAllWeek }) {
   // console.log(eilat[0].Coffee.NumberOfOrder);
   const labels = ["1.12", "2.12", "03.12", "04.12", "05.12", "06.12", "07.12"];
   // const numbers2 = [5, 8, 2, 110, 24, 1]
@@ -67,8 +66,8 @@ export function VerticalBar({ orderWeekly }) {
     datasets: [
       {
         label: "Dataset 1",
-        data:orderWeekly,
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        data:orderAllWeek,
+        backgroundColor: "rgba(50, 99, 132, 0.5)",
       },
     ],
   };

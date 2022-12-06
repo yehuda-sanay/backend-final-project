@@ -3,8 +3,8 @@ import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 
-export function CircelNumOfOrder({eilat}){
-    let allOrder=0
+export function CircelNumOfOrder({order}){
+    
     // allOrder=eilat[0].Coffee.NumberOfOrder+eilat[0].Drink.NumberOfOrder+eilat[0].Cake.NumberOfOrder+eilat[0].Tea.NumberOfOrder+eilat[0].Zinger.NumberOfOrder
     // allOrder=eilat[1].Coffee.NumberOfOrder+eilat[1].Drink.NumberOfOrder+eilat[1].Cake.NumberOfOrder+eilat[1].Tea.NumberOfOrder+eilat[1].Zinger.NumberOfOrder
     // allOrder=eilat[2].Coffee.NumberOfOrder+eilat[2].Drink.NumberOfOrder+eilat[2].Cake.NumberOfOrder+eilat[2].Tea.NumberOfOrder+eilat[2].Zinger.NumberOfOrder
@@ -15,11 +15,11 @@ export function CircelNumOfOrder({eilat}){
     // console.log(allOrder);
     return(
         <div className="div">
-        <CircularProgressbarWithChildren value={allOrder}>
+        <CircularProgressbarWithChildren value={order}>
   {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
   <img style={{ width: 40, marginTop: -5 }}/>
   <div style={{ fontSize: 12, marginTop: -5 }}>
-    <strong>{allOrder}</strong> order
+    <strong>{order}</strong> order
   </div>
 </CircularProgressbarWithChildren>
 </div>

@@ -5,27 +5,27 @@ import { Pie } from 'react-chartjs-2';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 
-export function PieProduct({eilat}) {
-    let Coffee=0;
-    let Cake=0
-    let Drink=0
-    let Tea=0
-    let Zinger=0
-    eilat.map(coffee =>Coffee+=coffee.Coffee.NumberOfOrder);
-    eilat.map(cake =>Cake+=cake.Cake.NumberOfOrder);
-    eilat.map(drink =>Drink+=drink.Drink.NumberOfOrder);
-    eilat.map(tea =>Tea+=tea.Tea.NumberOfOrder);
-    eilat.map(zinger =>Zinger+=zinger.Zinger.NumberOfOrder);
+export function PieProduct({coffee,drink,cake,tea,zinger}) {
+    // let Coffee=0;
+    // let Cake=0
+    // let Drink=0
+    // let Tea=0
+    // let Zinger=0
+    // eilat.map(coffee =>Coffee+=coffee.Coffee.NumberOfOrder);
+    // eilat.map(cake =>Cake+=cake.Cake.NumberOfOrder);
+    // eilat.map(drink =>Drink+=drink.Drink.NumberOfOrder);
+    // eilat.map(tea =>Tea+=tea.Tea.NumberOfOrder);
+    // eilat.map(zinger =>Zinger+=zinger.Zinger.NumberOfOrder);
     
     
-    console.log(Coffee,Cake);
+    console.log(coffee,drink,cake,tea,zinger);
     const data = {
       labels: ['Coffee', 'Cake', 'Drink', 'Tea', 'Zinger'],
       
       datasets: [
         {
           label: '# of Votes',
-          data: [Coffee, Cake, Drink, Tea, Zinger],
+          data: [coffee, cake, drink, tea, zinger],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',

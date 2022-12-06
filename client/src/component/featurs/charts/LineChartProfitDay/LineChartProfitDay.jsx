@@ -35,28 +35,51 @@ export const options = {
   },
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-const numbers =[20,30,54,41,20,41,47]
-const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: numbers.map((item) =>item),
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
-      tension:0.4
-    },
-    // {
-    //   label: 'Dataset 2',
-    //   data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-    //   borderColor: 'rgb(53, 162, 235)',
-    //   backgroundColor: 'rgba(53, 162, 235, 0.5)',
-    // },
-  ],
-};
 
-export function LineChartProfitDay({eilat}) {
+export function LineChartProfitDay({weeklyCoffee,weeklyDrink,weekyCake,weekyTea,weekyZinger}) {
+  const labels = ['01.12', '02.12', '03.12', '04.12', '05.12', '06.12', '07.12'];
+
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: 'Dataset 1',
+        data: weeklyCoffee.map((item) =>item),
+        borderColor: 'rgb(200, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        tension:0.4
+      },
+      {
+        label: 'Dataset 1',
+        data: weeklyDrink.map((item) =>item),
+        borderColor: 'rgb(150, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        tension:0.4
+      },
+      {
+        label: 'Dataset 1',
+        data: weekyCake.map((item) =>item),
+        borderColor: 'rgb(50, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        tension:0.4
+      },
+      {
+        label: 'Dataset 1',
+        data: weekyTea.map((item) =>item),
+        borderColor: 'rgb(89, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        tension:0.4
+      },
+      {
+        label: 'Dataset 1',
+        data: weekyZinger.map((item) =>item),
+        borderColor: 'rgb(300, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        tension:0.4
+      },
+      
+    ],
+  };
   return <Line options={options} data={data} />;
 }
 
