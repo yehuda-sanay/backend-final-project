@@ -31,6 +31,177 @@ export default function Home(){
   // const orderOfDay1=OrderByDay1Eilat[0].Coffee.NumberOfOrder
   // const orderDay1=OrderByDay1Eilat[0].Coffee.NumberOfOrder
   console.log(AllDetelsFromEilat);
+  
+
+//רווח שבועי לפי מוצרים
+    let weeklyCoffeeProfitArry=0
+    let weeklyDrinkProfitArray=0
+    let weekyCakeProfitArray=0
+    let weekyTeaProfitArray=0
+    let weekyZingerProfitArray=0
+//רווח כולל של מוצרים
+    let allCoffeeProfit=0
+    let allDrinkProfit=0
+    let allCakeProfit=0
+    let allTeaProfit=0
+    let allZingerProfit=0
+    // let allProfit=0
+//בסוף המערך יש את הסכום הכולל של כל השבוע
+    let allCoffeeProfitInEndOfLength=0
+    let allDrinkProfitInEndOfLength=0
+    let allCakeProfitInEndOfLength=0
+    let allTeaProfitInEndOfLength=0
+    let allZingerProfitInEndOfLength=0
+
+    //יצירת מערך של רווח שבועי
+    weeklyCoffeeProfitArry= AllDetelsFromEilat.map(coffee=>weeklyCoffeeProfitArry+=coffee.Coffee.NumberOfOrder*coffee.Coffee.Price)
+    console.log(`${weeklyCoffeeProfitArry}coffee profit`);
+    //חיבור של כל הרווחים היומיים ובסוף המערך יש את הסכום הכולל של כל השבוע
+    allCoffeeProfitInEndOfLength=weeklyCoffeeProfitArry.map(item=>allCoffeeProfit+=item)
+    console.log(`${allCoffeeProfitInEndOfLength} allCoffeeProfitInEndOfLength`);
+    //סכום כולל של כל השבוע
+    allCoffeeProfit=allCoffeeProfitInEndOfLength[allCoffeeProfitInEndOfLength.length-1]
+    
+
+    
+    //יצירת מערך של רווח שבועי
+    weeklyDrinkProfitArray= AllDetelsFromEilat.map(drink=>weeklyDrinkProfitArray+=drink.Drink.NumberOfOrder*drink.Drink.Price)
+    //חיבור של כל הרווחים היומיים ובסוף המערך יש את הסכום הכולל של כל השבוע
+    allDrinkProfitInEndOfLength=weeklyDrinkProfitArray.map(item=>allDrinkProfit+=item)
+    //סכום כולל של כל השבוע
+    allDrinkProfit=allDrinkProfitInEndOfLength[allDrinkProfitInEndOfLength.length-1]
+    
+    
+    
+    weekyCakeProfitArray= AllDetelsFromEilat.map(cake=>weekyCakeProfitArray+=cake.Cake.NumberOfOrder*cake.Cake.Price)
+    allCakeProfitInEndOfLength=weekyCakeProfitArray.map(item=>allCakeProfit+=item)
+    
+    allCakeProfit=allCakeProfitInEndOfLength[allCakeProfitInEndOfLength.length-1]
+    
+
+    
+    weekyTeaProfitArray= AllDetelsFromEilat.map(tea=>weekyTeaProfitArray+=tea.Tea.NumberOfOrder*tea.Tea.Price)
+
+    allTeaProfitInEndOfLength=weekyTeaProfitArray.map(item=>allTeaProfit+=item)
+    
+    allCakeProfit=allCakeProfitInEndOfLength[allCakeProfitInEndOfLength.length-1]
+    
+
+    
+    weekyZingerProfitArray= AllDetelsFromEilat.map(zinger=>weekyZingerProfitArray+=zinger.Zinger.NumberOfOrder*zinger.Zinger.Price)
+    
+    allZingerProfitInEndOfLength=weekyZingerProfitArray.map(item=>allZingerProfit+=item)
+    
+    allZingerProfit=allZingerProfitInEndOfLength[allZingerProfitInEndOfLength.length-1]
+    
+
+    let allProfit= allCoffeeProfit+allDrinkProfit+allCakeProfit+allTeaProfit+allZingerProfit
+ 
+
+
+    let ProfitArrayByDay1=weeklyCoffeeProfitArry[0]+weeklyDrinkProfitArray[0]+weekyCakeProfitArray[0]+weekyTeaProfitArray[0]+weekyZingerProfitArray[0]
+    let ProfitArrayByDay2=weeklyCoffeeProfitArry[1]+weeklyDrinkProfitArray[1]+weekyCakeProfitArray[1]+weekyTeaProfitArray[1]+weekyZingerProfitArray[1]
+    let ProfitArrayByDay3=weeklyCoffeeProfitArry[2]+weeklyDrinkProfitArray[2]+weekyCakeProfitArray[2]+weekyTeaProfitArray[2]+weekyZingerProfitArray[2]
+    let ProfitArrayByDay4=weeklyCoffeeProfitArry[3]+weeklyDrinkProfitArray[3]+weekyCakeProfitArray[3]+weekyTeaProfitArray[3]+weekyZingerProfitArray[3]
+    let ProfitArrayByDay5=weeklyCoffeeProfitArry[4]+weeklyDrinkProfitArray[4]+weekyCakeProfitArray[4]+weekyTeaProfitArray[4]+weekyZingerProfitArray[4]
+    let ProfitArrayByDay6=weeklyCoffeeProfitArry[5]+weeklyDrinkProfitArray[5]+weekyCakeProfitArray[5]+weekyTeaProfitArray[5]+weekyZingerProfitArray[5]
+    let ProfitArrayByDay7=weeklyCoffeeProfitArry[6]+weeklyDrinkProfitArray[6]+weekyCakeProfitArray[6]+weekyTeaProfitArray[6]+weekyZingerProfitArray[6]
+
+    let weeklyAllProductProfit=[ProfitArrayByDay1,ProfitArrayByDay2,ProfitArrayByDay3,ProfitArrayByDay4,ProfitArrayByDay5,ProfitArrayByDay6,ProfitArrayByDay7]
+     
+
+    console.log(`${weeklyAllProductProfit}sanay`);
+
+    
+
+    console.log(`${allProfit}allProfit`);
+
+    //הזמנות שבועיות
+    let weeklyCoffeeOrderArry=0
+    let weeklyDrinkOrderArray=0
+    let weekyCakeOrderArray=0
+    let weekyTeaOrderArray=0
+    let weekyZingerOrderArray=0
+
+    let allCoffeOrderInEndOfLength=0
+    let allDrinkOrderInEndOfLength=0
+    let allCakeOrderInEndOfLength=0
+    let allTeaOrderInEndOfLength=0
+    let allZingerOrderInEndOfLength=0
+
+    weeklyCoffeeOrderArry= AllDetelsFromEilat.map(coffee=>weeklyCoffeeOrderArry+=coffee.Coffee.NumberOfOrder)
+    allCoffeOrderInEndOfLength=weeklyCoffeeOrderArry.map(item=>allCoffeOrderInEndOfLength+=item)
+    console.log(`${allCoffeOrderInEndOfLength}allCoffeOrderInEndOfLength`);
+    console.log(`${weeklyCoffeeOrderArry}weeklyCoffeeOrderArry`);
+
+    weeklyDrinkOrderArray= AllDetelsFromEilat.map(drink=>weeklyDrinkOrderArray+=drink.Drink.NumberOfOrder)
+    allDrinkOrderInEndOfLength=weeklyDrinkOrderArray.map(item=>allDrinkOrderInEndOfLength+=item)
+    console.log(`${allDrinkOrderInEndOfLength}allDrinkOrderInEndOfLength`);
+    console.log(`${weeklyDrinkOrderArray}weeklyDrinkOrderArray`);
+
+    weekyCakeOrderArray= AllDetelsFromEilat.map(cake=>weekyCakeOrderArray+=cake.Cake.NumberOfOrder)
+    allCakeOrderInEndOfLength=weekyCakeOrderArray.map(item=>allCakeOrderInEndOfLength+=item)
+    console.log(`${allCakeOrderInEndOfLength}allCakeOrderInEndOfLength`);
+    console.log(`${weekyCakeOrderArray}weekyCakeOrderArray`);
+
+    weekyTeaOrderArray= AllDetelsFromEilat.map(tea=>weekyTeaOrderArray+=tea.Tea.NumberOfOrder)
+    allTeaOrderInEndOfLength=weekyTeaOrderArray.map(item=>allTeaOrderInEndOfLength+=item)
+    console.log(`${allTeaOrderInEndOfLength}allTeaOrderInEndOfLength`);
+    console.log(`${weekyTeaOrderArray}weekyTeaOrderArray`);
+
+    weekyZingerOrderArray= AllDetelsFromEilat.map(zinger=>weekyZingerOrderArray+=zinger.Zinger.NumberOfOrder)
+    allZingerOrderInEndOfLength=weekyZingerOrderArray.map(item=>allZingerOrderInEndOfLength+=item)
+    console.log(`${allZingerOrderInEndOfLength}allZingerOrderInEndOfLength`);
+    console.log(`${weekyZingerOrderArray}weekyZingerOrderArray`);
+  
+
+     let allOrderDay1=weeklyCoffeeOrderArry[0]+weeklyDrinkOrderArray[0]+weekyCakeOrderArray[0]+weekyTeaOrderArray[0]+weekyZingerOrderArray[0]
+     let allOrderDay2=weeklyCoffeeOrderArry[1]+weeklyDrinkOrderArray[1]+weekyCakeOrderArray[1]+weekyTeaOrderArray[1]+weekyZingerOrderArray[1]
+     let allOrderDay3=weeklyCoffeeOrderArry[2]+weeklyDrinkOrderArray[2]+weekyCakeOrderArray[2]+weekyTeaOrderArray[2]+weekyZingerOrderArray[2]
+     let allOrderDay4=weeklyCoffeeOrderArry[3]+weeklyDrinkOrderArray[3]+weekyCakeOrderArray[3]+weekyTeaOrderArray[3]+weekyZingerOrderArray[3]
+     let allOrderDay5=weeklyCoffeeOrderArry[4]+weeklyDrinkOrderArray[4]+weekyCakeOrderArray[4]+weekyTeaOrderArray[4]+weekyZingerOrderArray[4]
+     let allOrderDay6=weeklyCoffeeOrderArry[5]+weeklyDrinkOrderArray[5]+weekyCakeOrderArray[5]+weekyTeaOrderArray[5]+weekyZingerOrderArray[5]
+     let allOrderDay7=weeklyCoffeeOrderArry[6]+weeklyDrinkOrderArray[6]+weekyCakeOrderArray[6]+weekyTeaOrderArray[6]+weekyZingerOrderArray[6]
+    console.log(`${allOrderDay1}allOrderDay1${allOrderDay2}`);
+
+    let orderAllWeek=[allOrderDay1,allOrderDay2,allOrderDay3,allOrderDay4,allOrderDay5,allOrderDay6,allOrderDay7]
+    console.log(`${orderAllWeek}orderAllWeek`);
+
+    let allOrders=allOrderDay1+allOrderDay2+allOrderDay3+allOrderDay4+allOrderDay5+allOrderDay6+allOrderDay7
+
+    console.log(`${allOrders}allOrdersfsgkjfgdfkgjdfgdkfjg`);
+    
+    
+  return(
+    <div>
+      <h1>home</h1>
+      <VerticalBar orderWeekly={orderAllWeek}/>
+      <PieProduct coffee={allCoffeOrderInEndOfLength[6]} drink={allDrinkOrderInEndOfLength[6]}
+      cake={allCakeOrderInEndOfLength[6]} tea={allTeaOrderInEndOfLength[6]} zinger={allZingerOrderInEndOfLength[6]}
+      
+      />
+      <PieClient eilat={AllDetelsFromEilat} />
+      <CircelNumOfOrder order={allOrders}/>
+      <CircelTotalOfOrder profit={allProfit}/>
+      <DayCard/>
+      <MaxProductPurchasd/>
+      <LineChartProfitDay weeklyCoffee={weeklyCoffeeOrderArry}
+      weeklyDrink={weeklyDrinkOrderArray}
+      weekyCake={weekyCakeOrderArray}
+      weekyTea={weekyTeaOrderArray}
+      weekyZinger={weekyZingerOrderArray}
+      />
+      
+      <TotalOrderedProductsCard/>
+      <VerticalBarNumberOfProduct orderAllWeek={orderAllWeek}/>
+      <VerticalBarSalesDay weeklyAllProductProfit={weeklyAllProductProfit}/>
+      
+      </div>
+  )
+}
+
+
+
 
 //רווח יומי מכל מוצר
   // let profitCoffeeDay1=0
@@ -116,167 +287,3 @@ export default function Home(){
   // profitCakeDay7=AllDetelsFromEilat[6].Cake.Price*AllDetelsFromEilat[6].Cake.NumberOfOrder
   // profitTeaDay7=AllDetelsFromEilat[6].Tea.Price*AllDetelsFromEilat[6].Tea.NumberOfOrder
   // profitZingerDay7=AllDetelsFromEilat[6].Zinger.Price*AllDetelsFromEilat[6].Zinger.NumberOfOrder
-  
-  
-
-//רווח שבועי לפי מוצרים
-    let weeklyCoffeeProfitArry=0
-    let weeklyDrinkProfitArray=0
-    let weekyCakeProfitArray=0
-    let weekyTeaProfitArray=0
-    let weekyZingerProfitArray=0
-//רווח כולל של מוצרים
-    let allCoffeeProfit=0
-    let allDrinkProfit=0
-    let allCakeProfit=0
-    let allTeaProfit=0
-    let allZingerProfit=0
-    // let allProfit=0
-//בסוף המערך יש את הסכום הכולל של כל השבוע
-    let allCoffeeProfitInEndOfLength=0
-    let allDrinkProfitInEndOfLength=0
-    let allCakeProfitInEndOfLength=0
-    let allTeaProfitInEndOfLength=0
-    let allZingerProfitInEndOfLength=0
-
-    //יצירת מערך של רווח שבועי
-    weeklyCoffeeProfitArry= AllDetelsFromEilat.map(coffee=>weeklyCoffeeProfitArry+=coffee.Coffee.NumberOfOrder*coffee.Coffee.Price)
-    console.log(`${weeklyCoffeeProfitArry}coffee profit`);
-    //חיבור של כל הרווחים היומיים ובסוף המערך יש את הסכום הכולל של כל השבוע
-    allCoffeeProfitInEndOfLength=weeklyCoffeeProfitArry.map(item=>allCoffeeProfit+=item)
-    console.log(`${allCoffeeProfitInEndOfLength} allCoffeeProfitInEndOfLength`);
-    //סכום כולל של כל השבוע
-    allCoffeeProfit=allCoffeeProfitInEndOfLength[allCoffeeProfitInEndOfLength.length-1]
-    // console.log(`${allCoffeeProfit}all Coffee profit` );
-
-    
-    //יצירת מערך של רווח שבועי
-    weeklyDrinkProfitArray= AllDetelsFromEilat.map(drink=>weeklyDrinkProfitArray+=drink.Drink.NumberOfOrder*drink.Drink.Price)
-    //חיבור של כל הרווחים היומיים ובסוף המערך יש את הסכום הכולל של כל השבוע
-    allDrinkProfitInEndOfLength=weeklyDrinkProfitArray.map(item=>allDrinkProfit+=item)
-    //סכום כולל של כל השבוע
-    allDrinkProfit=allDrinkProfitInEndOfLength[allDrinkProfitInEndOfLength.length-1]
-    // console.log(`${allDrinkProfit}all Coffee profit` );
-    
-    
-    weekyCakeProfitArray= AllDetelsFromEilat.map(cake=>weekyCakeProfitArray+=cake.Cake.NumberOfOrder*cake.Cake.Price)
-    allCakeProfitInEndOfLength=weekyCakeProfitArray.map(item=>allCakeProfit+=item)
-    // console.log(`${allCakeProfit}allCakeProfit`);
-    allCakeProfit=allCakeProfitInEndOfLength[allCakeProfitInEndOfLength.length-1]
-    // console.log(`${allCakeProfit}all Coffee profit` );
-
-    
-    weekyTeaProfitArray= AllDetelsFromEilat.map(tea=>weekyTeaProfitArray+=tea.Tea.NumberOfOrder*tea.Tea.Price)
-
-    allTeaProfitInEndOfLength=weekyTeaProfitArray.map(item=>allTeaProfit+=item)
-    // console.log(`${allTeaProfit}allTeaProfit`);
-    allCakeProfit=allCakeProfitInEndOfLength[allCakeProfitInEndOfLength.length-1]
-    // console.log(`${allCakeProfit}all Coffee profit` );
-
-    
-    weekyZingerProfitArray= AllDetelsFromEilat.map(zinger=>weekyZingerProfitArray+=zinger.Zinger.NumberOfOrder*zinger.Zinger.Price)
-    
-    allZingerProfitInEndOfLength=weekyZingerProfitArray.map(item=>allZingerProfit+=item)
-    // console.log(`${allZingerProfit}allZingerProfit`);
-    allZingerProfit=allZingerProfitInEndOfLength[allZingerProfitInEndOfLength.length-1]
-    // console.log(`${allZingerProfit}all Coffee profit` );
-
-    let allProfit= allCoffeeProfit+allDrinkProfit+allCakeProfit+allTeaProfit+allZingerProfit
-    // let weeklyCoffeeProfitArry=0
-    // let weeklyDrinkProfitArray=0
-    // let weekyCakeProfitArray=0
-    // let weekyTeaProfitArray=0
-    // let weekyZingerProfitArray=0
-
-
-    let weelyCoffeeProfitarray= weeklyCoffeeProfitArry.map(item=>weelyCoffeeProfitarray+item)
-    // let weelyDrinkProfitarray= weeklyCoffeeProfitArry.map(item=>weelyProfitarray+item)
-    console.log(`${weelyCoffeeProfitarray}weelyCoffeeProfitarraysdfksljdfsldkfsjdflksdfjsd`);
-
-    
-
-    console.log(`${allProfit}allProfit`);
-
-    //הזמנות שבועיות
-    let weeklyCoffeeOrderArry=0
-    let weeklyDrinkOrderArray=0
-    let weekyCakeOrderArray=0
-    let weekyTeaOrderArray=0
-    let weekyZingerOrderArray=0
-
-    let allCoffeOrderInEndOfLength=0
-    let allDrinkOrderInEndOfLength=0
-    let allCakeOrderInEndOfLength=0
-    let allTeaOrderInEndOfLength=0
-    let allZingerOrderInEndOfLength=0
-
-    weeklyCoffeeOrderArry= AllDetelsFromEilat.map(coffee=>weeklyCoffeeOrderArry+=coffee.Coffee.NumberOfOrder)
-    allCoffeOrderInEndOfLength=weeklyCoffeeOrderArry.map(item=>allCoffeOrderInEndOfLength+=item)
-    console.log(`${allCoffeOrderInEndOfLength}allCoffeOrderInEndOfLength`);
-    console.log(`${weeklyCoffeeOrderArry}weeklyCoffeeOrderArry`);
-
-    weeklyDrinkOrderArray= AllDetelsFromEilat.map(drink=>weeklyDrinkOrderArray+=drink.Drink.NumberOfOrder)
-    allDrinkOrderInEndOfLength=weeklyDrinkOrderArray.map(item=>allDrinkOrderInEndOfLength+=item)
-    console.log(`${allDrinkOrderInEndOfLength}allDrinkOrderInEndOfLength`);
-    console.log(`${weeklyDrinkOrderArray}weeklyDrinkOrderArray`);
-
-    weekyCakeOrderArray= AllDetelsFromEilat.map(cake=>weekyCakeOrderArray+=cake.Cake.NumberOfOrder)
-    allCakeOrderInEndOfLength=weekyCakeOrderArray.map(item=>allCakeOrderInEndOfLength+=item)
-    console.log(`${allCakeOrderInEndOfLength}allCakeOrderInEndOfLength`);
-    console.log(`${weekyCakeOrderArray}weekyCakeOrderArray`);
-
-    weekyTeaOrderArray= AllDetelsFromEilat.map(tea=>weekyTeaOrderArray+=tea.Tea.NumberOfOrder)
-    allTeaOrderInEndOfLength=weekyTeaOrderArray.map(item=>allTeaOrderInEndOfLength+=item)
-    console.log(`${allTeaOrderInEndOfLength}allTeaOrderInEndOfLength`);
-    console.log(`${weekyTeaOrderArray}weekyTeaOrderArray`);
-
-    weekyZingerOrderArray= AllDetelsFromEilat.map(zinger=>weekyZingerOrderArray+=zinger.Zinger.NumberOfOrder)
-    allZingerOrderInEndOfLength=weekyZingerOrderArray.map(item=>allZingerOrderInEndOfLength+=item)
-    console.log(`${allZingerOrderInEndOfLength}allZingerOrderInEndOfLength`);
-    console.log(`${weekyZingerOrderArray}weekyZingerOrderArray`);
-  
-
-     let allOrderDay1=weeklyCoffeeOrderArry[0]+weeklyDrinkOrderArray[0]+weekyCakeOrderArray[0]+weekyTeaOrderArray[0]+weekyZingerOrderArray[0]
-     let allOrderDay2=weeklyCoffeeOrderArry[1]+weeklyDrinkOrderArray[1]+weekyCakeOrderArray[1]+weekyTeaOrderArray[1]+weekyZingerOrderArray[1]
-     let allOrderDay3=weeklyCoffeeOrderArry[2]+weeklyDrinkOrderArray[2]+weekyCakeOrderArray[2]+weekyTeaOrderArray[2]+weekyZingerOrderArray[2]
-     let allOrderDay4=weeklyCoffeeOrderArry[3]+weeklyDrinkOrderArray[3]+weekyCakeOrderArray[3]+weekyTeaOrderArray[3]+weekyZingerOrderArray[3]
-     let allOrderDay5=weeklyCoffeeOrderArry[4]+weeklyDrinkOrderArray[4]+weekyCakeOrderArray[4]+weekyTeaOrderArray[4]+weekyZingerOrderArray[4]
-     let allOrderDay6=weeklyCoffeeOrderArry[5]+weeklyDrinkOrderArray[5]+weekyCakeOrderArray[5]+weekyTeaOrderArray[5]+weekyZingerOrderArray[5]
-     let allOrderDay7=weeklyCoffeeOrderArry[6]+weeklyDrinkOrderArray[6]+weekyCakeOrderArray[6]+weekyTeaOrderArray[6]+weekyZingerOrderArray[6]
-    console.log(`${allOrderDay1}allOrderDay1${allOrderDay2}`);
-
-    let orderAllWeek=[allOrderDay1,allOrderDay2,allOrderDay3,allOrderDay4,allOrderDay5,allOrderDay6,allOrderDay7]
-    console.log(`${orderAllWeek}orderAllWeek`);
-
-    let allOrders=allOrderDay1+allOrderDay2+allOrderDay3+allOrderDay4+allOrderDay5+allOrderDay6+allOrderDay7
-
-    console.log(`${allOrders}allOrdersfsgkjfgdfkgjdfgdkfjg`);
-    
-    
-  return(
-    <div>
-      <h1>home</h1>
-      <VerticalBar orderWeekly={orderAllWeek}/>
-      <PieProduct coffee={allCoffeOrderInEndOfLength[0]} drink={allDrinkOrderInEndOfLength[0]}
-      cake={allCakeOrderInEndOfLength[0]} tea={allTeaOrderInEndOfLength[0]} zinger={allZingerOrderInEndOfLength[0]}
-      
-      />
-      <PieClient eilat={AllDetelsFromEilat} />
-      <CircelNumOfOrder order={allOrders}/>
-      <CircelTotalOfOrder profit={allProfit}/>
-      <DayCard/>
-      <MaxProductPurchasd/>
-      <LineChartProfitDay weeklyCoffee={weeklyCoffeeOrderArry}
-      weeklyDrink={weeklyDrinkOrderArray}
-      weekyCake={weekyCakeOrderArray}
-      weekyTea={weekyTeaOrderArray}
-      weekyZinger={weekyZingerOrderArray}
-      />
-      
-      <TotalOrderedProductsCard/>
-      <VerticalBarNumberOfProduct orderAllWeek={orderAllWeek}/>
-      <VerticalBarSalesDay eilat={AllDetelsFromEilat}/>
-      
-      </div>
-  )
-}

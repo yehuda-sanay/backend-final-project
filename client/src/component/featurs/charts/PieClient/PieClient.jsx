@@ -13,7 +13,7 @@ export function PieClient({eilat}) {
     eilat.map(drink =>purchswError+=drink.Drink.PurhaseError);
     eilat.map(tea =>purchswError+=tea.Tea.PurhaseError);
     eilat.map(zinger =>purchswError+=zinger.Zinger.PurhaseError);
-    console.log(purchswError);
+    console.log(`${purchswError}purchswError`);
     eilat.map(coffee =>clientDeclined+=coffee.Coffee.ClientDeclined);
     eilat.map(cake =>clientDeclined+=cake.Cake.ClientDeclined);
     eilat.map(drink =>clientDeclined+=drink.Drink.ClientDeclined);
