@@ -13,6 +13,7 @@ import MaxProductPurchasd from "../../featurs/cards/MaxProductPurchasd/MaxProduc
 import TotalOrderedProductsCard from "../../featurs/cards/TotalOrderedProductsCard/TotalOrderedProductsCard";
 import { VerticalBarNumberOfProduct } from "../../featurs/charts/VerticalBarNumberOfProduct/VerticalBarNumberOfProduct";
 import { Container, Row, Col } from "react-bootstrap";
+import CoffeeCard from '../../featurs/cards/CoffeeCard/CoffeeCard'
 export default function Home() {
   const {
     AllDetelsFromEilat,
@@ -355,10 +356,10 @@ export default function Home() {
         </Row>
         <Row>
           <Col sm={6}>
-            <TotalOrderedProductsCard />
+            <CoffeeCard allCoffeeProfit={allCoffeeProfit} allCoffeOrderInEndOfLength={allCoffeOrderInEndOfLength[6]} />
           </Col>
           <Col sm={6}>
-            <TotalOrderedProductsCard />
+            <TotalOrderedProductsCard allCakeProfit={allCakeProfit} allCakeOrderInEndOfLength={allCakeOrderInEndOfLength[6]} />
           </Col>
         </Row>
         <Row>
